@@ -38,7 +38,7 @@ with open(file, 'r') as csvfile:
         all_rows.append(row[0])
         total_months = len(all_rows)
 
-    #calculate the changes of profit_loss taking next profit_loss and suptructing previous one 
+    #calculate the changes of profit_loss taking next profit_loss and subtracting previous one 
     changes = [profit_loss[i+1] - profit_loss[i] for i in range(len(profit_loss)-1)]
 
     #Calculate average change as a sum devided by number of rows less then 1
@@ -53,8 +53,8 @@ with open(file, 'r') as csvfile:
 
     #We need to conncet greatest_increase change and greatest_decrease change with corresponding date when it occured  
 
-date_index_greatest_increase = all_rows[changes.index(greatest_increase)]
-date_index_greatest_decrease = all_rows[changes.index(greatest_decrease)]
+date_index_greatest_increase = all_rows[changes.index(greatest_increase)+1]
+date_index_greatest_decrease = all_rows[changes.index(greatest_decrease)+1]
 
 
 
@@ -63,7 +63,7 @@ print ()
 print("Financial Analysis PyBank")
 print("---------------------------------------")  
 print ()
-print(f"Total number of months: {total_months}") 
+print(f"Total number of months: {total_months}")
 print ()
 print(f"Total profit/loss: ${total_profit_loss}")
 print ()
