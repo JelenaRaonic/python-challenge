@@ -7,7 +7,7 @@ current_directory = os.getcwd ()
 #define the apsolute path of the file
 file = os.path.join(current_directory, 'election_data.csv') 
 
-#definy the path that is associated with file budget_data.csv
+#definy the path that is associated with file election_data.csv
 file = '/Users/jelenaraonic/UTOR-VIRT-DATA-PT-02-2024-U-LOLC/python-challenge/PyPoll/Resources/election_data.csv'
 
 all_rows = []
